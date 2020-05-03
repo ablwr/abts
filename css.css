@@ -1,7 +1,9 @@
 body {
-  display: flex;
+  display: grid;
+  grid-template-columns: 80% 20%;
   align-items: center;
   justify-content: center;
+  justify-items: center;
   width: 100vw;
   height: 100vh;
   background: linear-gradient(to bottom, #1f1182, #1b0921);
@@ -289,9 +291,61 @@ svg {
   position: absolute;
 }
 
+.countdown-container {
+  text-align: right;
+}
 
+#title {
+  letter-spacing: 0.10em;
+  padding-bottom: 1em;
+}
 
+aside {
+  display: grid;
+  grid-template-columns: 1;
+  justify-self: left;
+}
 
+aside div {
+  padding: 0.2em;
+  font-size: 8vmin;
+}
+
+aside div:hover {
+  cursor: pointer;
+  font-size: 4.20em;
+}
+
+.tooltip {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+}
+
+.tooltip .left {
+  font-size: 0.2em;
+  left:-20px;
+  transform: translate(-30%,-100%);
+  padding: 0 1em 0 1em;
+  color: #ffffff;
+  background: #1f1182;
+  font-weight: normal;
+  border-radius: 0.75em;
+  position: absolute;
+  z-index: 99999999;
+  box-sizing: border-box;
+  box-shadow: 2px 2px black;
+  display: none;
+}
+
+.tooltip:hover .left {
+  display:block;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
 
 
 
